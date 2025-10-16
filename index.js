@@ -64,6 +64,7 @@ console.log(req); // full object log
       <body>
         <h1>About Me</h1>
         <h2>A few facts</h2>
+        <p>I am 31 years old.</p>
         <p>I enjoy coding, learning JavaScript, and experimenting with Node.js.</p>
         <p><a href="/">Return Home</a></p>
       </body>
