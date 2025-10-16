@@ -21,6 +21,11 @@ console.log(req); // full object log
   else if (lang.startsWith('fr')) greeting = 'Bonjour';
   else if (lang.startsWith('it')) greeting = 'Ciao';
 
+  let welcomeMsg = 'Welcome to my page!';
+  if (lang.startsWith('es')) welcomeMsg = '¡Bienvenido a mi página!';
+  else if (lang.startsWith('fr')) welcomeMsg = 'Bienvenue sur ma page !';
+  else if (lang.startsWith('it')) welcomeMsg = 'Benvenuto nella mia pagina!';
+
   //  Routing logic based on URL
   let content = '';
   if (req.url === '/' || req.url.startsWith('/?')) {
@@ -37,7 +42,7 @@ console.log(req); // full object log
         </style>
       </head>
       <body>
-        <h1>${greeting}, welcome to my page!</h1>
+        <h1>${greeting}, ${welcomeMsg}</h1>
         <h2>${isMobile ? 'Mobile User Detected' : 'Desktop User Detected'}</h2>
         <p>I’m <strong>Alberto</strong>. This simple Node.js app serves an HTML page using the built-in <code>http</code> module.</p>
         <div class="info">
